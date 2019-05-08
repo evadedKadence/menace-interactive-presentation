@@ -174,13 +174,15 @@ def chooseBead(boxNum):
     for i in range(9):
         try:
             b = int(matchboxes[boxNum][i])
-            arr[i]=b
+            if b != 0:
+                arr[i]=b
         except:
             pass
     summ = sum(arr.values())
     if summ == 0:
         return gamePos.index(0)
     rand = random.randint(1,summ)
+    print(arr)
     for i in arr:
         rand -= int(arr[i])
         if rand <= 0:
@@ -292,6 +294,7 @@ def findBox():
         while not submit:
             errors+=1
             if errors > 6:
+                print('Failed rotations test')
                 raise Exception('Failed rotations test.')
                 break
             tempPos=[0,0,0,0,0,0,0,0,0]
@@ -640,50 +643,55 @@ while textNum < len(text):
                 gameFinished = True
                 continue
     #def menaceTurn():
-    if len(moves) <= 4:
-        try:
-            box = findBox()
-        except:
-            if len(moves)>=2:
-                winCheck = checkWin()
-                if winCheck == 'playerWin':
+    try:
+        box = findBox()
+    except:
+        if len(moves)>=2:
+            winCheck = checkWin()
+            if winCheck == 'playerWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE LOST')
+                gameResult.draw(win)
+                loseUpdate()
+                gameFinished = True
+                continue
+            if winCheck == 'menaceWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE WON')
+                gameResult.draw(win)
+                winUpdate()
+                gameFinished = True
+                continue
+            if len(moves)>=4:
+                if winCheck == '':
                     gameResult.undraw()
-                    gameResult.setText('MACHINE LOST')
+                    gameResult.setText("IT'S A DRAW")
                     gameResult.draw(win)
-                    loseUpdate()
+                    drawUpdate()
                     gameFinished = True
                     continue
-                if winCheck == 'menaceWin':
-                    gameResult.undraw()
-                    gameResult.setText('MACHINE WON')
-                    gameResult.draw(win)
-                    winUpdate()
-                    gameFinished = True
-                    continue
-                if len(moves)>=4:
-                    if winCheck == '':
-                        gameResult.undraw()
-                        gameResult.setText("IT'S A DRAW")
-                        gameResult.draw(win)
-                        drawUpdate()
-                        gameFinished = True
-                        continue
     x,y = chooseBead(box)
-    if x == 'x' and y == 'x':
-        beadChosen = False
-        while not beadChosen:
+    failSafe = False
+    if x == 'x':
+        for t in range(3):
             x,y = chooseBead(box)
+            print(box)
             print('beads: ' + str(x) + ' (' + str(y) + ')')
-            if x == 'x' and y == 'x':
-                x = gamePos.index(0)
-                y = gamePos.index(0)
-            else:
-                beadChosen = True
+            if x != 'x':
+                break
+    if x == 'x':
+        x = gamePos.index(0)
+        y = gamePos.index(0) 
+        print(box)  
+        print('beads: ' + str(x) + ' (' + str(y) + ')') 
+        failSafe = True            
     moves[box]=x
+    if failSafe:
+        moves.pop(box)
     gamePos[y]='o'
     b[y].rect.setFill('black')
     b[y].deactivate()
-    if len(moves)>=2:
+    if len(moves)>2:
         winCheck = checkWin()
         if winCheck == 'playerWin':
             gameResult.undraw()
