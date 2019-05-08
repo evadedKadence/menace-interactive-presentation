@@ -1,0 +1,117 @@
+Think you can beat a collection of beads at tic tac toe?
+Find out: -->
+TURN
+How can an inanimate object learn?
+TURN
+First we need to define 'learning.' In this case, the best way is
+'changing behavior based on past experience.'
+TURN
+You're giving the machine experience now as you play against it.
+TURN
+But, what is it?
+TURN
+Your foe is a (simulated) collection of buckets full of beads.
+TURN
+Each turn, the machine picks up the bucket that represents the
+position of the board and chooses a random bead.
+Its color dictates its next move.
+TURN
+So, at first it is choosing at random.
+(It might be a little dumb. Go easy on it.)
+TURN
+But, depending on the outcome of a game, it updates these buckets.
+For each color bead used in the game, it will:
+
+Add 3 in the case of a WIN
+Remove 1 in the case of a LOSS
+Add 1 in the case of a DRAW
+
+to its respective bucket.
+TURN
+In theory, the beads populating the buckets will shift to the
+optimal decision.
+(Side note: The bead in the lead is whose
+color you see below in each bucket. Gray is a tie.)
+TURN
+It discovers strategies, and in many cases can create new ones
+humankind has never seen. (At least, for games far more complicated
+than tic-tac-toe. Us humans have sorta got this one on lock.)
+TURN
+Just by playing against it, you're increasing its dataset and
+making it smarter.
+TURN
+This is just one method of machine learning, a subgroup of
+artificial intelligence that has overtaken our modern world.
+TURN
+Machine learning has achieved image recognition, voice-to-text,
+Youtube video recommendations, and even self-driving cars.
+TURN
+Yet, when most people hear 'Artificial Intelligence,'
+they imagine superintelligent androids taking over the world.
+TURN
+Never buckets of beads.
+How sad, our poor little guy, overlooked.
+TURN
+Oops. Um...
+TURN
+I just referred to our inanimate pile of beads as a
+'little guy'... didn't I?
+But it's just a machine. Literally ones and zeros.
+TURN
+As human beings, we have a tendency to anthropomorphize things.
+TURN
+This is quickly becoming a problem.
+As AI technology becomes more and more ubiquitous,
+people can become too trusting of these machines.
+TURN
+Their false intelligence and reliance on numbers lulls people into
+thinking of them as trustworthy, when really these machines
+are beginning to hold more and more power.
+TURN
+Computers are good at some things, but not morality. If even we
+can’t translate our sense of right and wrong into concrete rules
+(see the entire study of metaethics),
+how can a programmer code that for a computer?
+TURN
+They can’t. So, when these machines are unleashed into the world,
+judging teachers, job resumes, images,
+and every person who’s ever been online,
+they have no bigger picture than the numbers they’re given.
+TURN
+This, as Cathy O’Neil points out in her book
+Weapons of Math Destruction, can promote feedback loops
+that increase the inequality in the world.
+TURN
+Even though people assume machine learning is completely unbiased
+(being a computer - an inanimate object),
+it really only knows what its programmers - humans - have taught it,
+and the biases get put right back in, only overlooked.
+TURN
+Take, for example, Kyle Behm’s experience job searching,
+with an AI-assessed personality test called the “Five Factor Model”
+test. Even though he had a near-perfect SAT and had gotten into
+Vanderbilt, it profiled him for his bipolar disorder that shouldn’t
+be known of - much less taken into account - by employers.
+TURN
+And fifth-grade teacher Sarah Wysocki’s teaching evaluation done by
+IMPACT, which got her fired due to her students’ test scores even
+though she was praised by faculty and students for her skill.
+TURN
+Also all of the people funneled through diploma mills like University
+of Phoenix or Corinthian College, who show their ads to low-income
+people using AI-driven targeted marketing to rake in government
+financed loans as tuition
+and leave the poor dropping out with loads of debt.
+TURN
+Or the large population of people (around 50% of the US)
+whose jobs are being threatened by AI automation.
+TURN
+All these injustices go overlooked because people assume
+machine learning is innocuous.
+TURN
+Maybe you should be scared of piles of beads.
+TURN
+Thank you for playing! Your game data has been recorded,
+and will inform future games.
+Come back later to see how much it will improve!
+TURN
