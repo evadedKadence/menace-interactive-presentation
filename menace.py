@@ -634,7 +634,23 @@ while textNum < len(text):
             winUpdate()
             gameFinished = True
             continue
-        if len(moves)>=4:
+        try:
+            gamePos.index(0)
+        except:
+            if winCheck == 'playerWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE LOST')
+                gameResult.draw(win)
+                loseUpdate()
+                gameFinished = True
+                continue
+            if winCheck == 'menaceWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE WON')
+                gameResult.draw(win)
+                winUpdate()
+                gameFinished = True
+                continue
             if winCheck == '':
                 gameResult.undraw()
                 gameResult.setText("IT'S A DRAW")
@@ -662,7 +678,23 @@ while textNum < len(text):
                 winUpdate()
                 gameFinished = True
                 continue
-            if len(moves)>=4:
+            try:
+                gamePos.index(0)
+            except:
+                if winCheck == 'playerWin':
+                    gameResult.undraw()
+                    gameResult.setText('MACHINE LOST')
+                    gameResult.draw(win)
+                    loseUpdate()
+                    gameFinished = True
+                    continue
+                if winCheck == 'menaceWin':
+                    gameResult.undraw()
+                    gameResult.setText('MACHINE WON')
+                    gameResult.draw(win)
+                    winUpdate()
+                    gameFinished = True
+                    continue
                 if winCheck == '':
                     gameResult.undraw()
                     gameResult.setText("IT'S A DRAW")
@@ -673,7 +705,7 @@ while textNum < len(text):
     x,y = chooseBead(box)
     failSafe = False
     if x == 'x':
-        for t in range(3):
+        for redo in range(3):
             x,y = chooseBead(box)
             print(box)
             print('beads: ' + str(x) + ' (' + str(y) + ')')
@@ -707,7 +739,23 @@ while textNum < len(text):
             winUpdate()
             gameFinished = True
             continue
-        if len(moves)>=5:
+        try:
+            gamePos.index(0)
+        except:
+            if winCheck == 'playerWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE LOST')
+                gameResult.draw(win)
+                loseUpdate()
+                gameFinished = True
+                continue
+            if winCheck == 'menaceWin':
+                gameResult.undraw()
+                gameResult.setText('MACHINE WON')
+                gameResult.draw(win)
+                winUpdate()
+                gameFinished = True
+                continue
             if winCheck == '':
                 gameResult.undraw()
                 gameResult.setText("IT'S A DRAW")
@@ -716,3 +764,8 @@ while textNum < len(text):
                 gameFinished = True
                 continue
     drawGamePos()
+drawGamePos()
+p=win.getMouse()
+gameResult.undraw()
+gameResult.setText("GAME OVER")
+gameResult.draw(win)
