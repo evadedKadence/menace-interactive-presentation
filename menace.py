@@ -637,20 +637,6 @@ while textNum < len(text):
         try:
             gamePos.index(0)
         except:
-            if winCheck == 'playerWin':
-                gameResult.undraw()
-                gameResult.setText('MACHINE LOST')
-                gameResult.draw(win)
-                loseUpdate()
-                gameFinished = True
-                continue
-            if winCheck == 'menaceWin':
-                gameResult.undraw()
-                gameResult.setText('MACHINE WON')
-                gameResult.draw(win)
-                winUpdate()
-                gameFinished = True
-                continue
             if winCheck == '':
                 gameResult.undraw()
                 gameResult.setText("IT'S A DRAW")
@@ -681,20 +667,6 @@ while textNum < len(text):
             try:
                 gamePos.index(0)
             except:
-                if winCheck == 'playerWin':
-                    gameResult.undraw()
-                    gameResult.setText('MACHINE LOST')
-                    gameResult.draw(win)
-                    loseUpdate()
-                    gameFinished = True
-                    continue
-                if winCheck == 'menaceWin':
-                    gameResult.undraw()
-                    gameResult.setText('MACHINE WON')
-                    gameResult.draw(win)
-                    winUpdate()
-                    gameFinished = True
-                    continue
                 if winCheck == '':
                     gameResult.undraw()
                     gameResult.setText("IT'S A DRAW")
@@ -742,20 +714,6 @@ while textNum < len(text):
         try:
             gamePos.index(0)
         except:
-            if winCheck == 'playerWin':
-                gameResult.undraw()
-                gameResult.setText('MACHINE LOST')
-                gameResult.draw(win)
-                loseUpdate()
-                gameFinished = True
-                continue
-            if winCheck == 'menaceWin':
-                gameResult.undraw()
-                gameResult.setText('MACHINE WON')
-                gameResult.draw(win)
-                winUpdate()
-                gameFinished = True
-                continue
             if winCheck == '':
                 gameResult.undraw()
                 gameResult.setText("IT'S A DRAW")
