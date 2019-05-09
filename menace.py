@@ -723,7 +723,7 @@ while textNum < len(text):
     gamePos[y]='o'
     b[y].rect.setFill('black')
     b[y].deactivate()
-    if len(moves)>2:
+    if len(moves)>=2:
         winCheck = checkWin()
         if winCheck == 'playerWin':
             gameResult.undraw()
